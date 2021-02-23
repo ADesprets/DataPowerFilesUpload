@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.datapower.com/schemas/management"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.datapower.com/schemas/management">
+	<!-- An xml-mgmt request -->
+	<xsd:element name="request">
+		<xsd:complexType>
+			<xsd:choice>
+				<!-- upload file -->
+				<xsd:element name="set-file">
+					<xsd:complexType>
+						<xsd:simpleContent>
+							<xsd:extension base="xsd:base64Binary">
+								<xsd:attribute name="name" type="xsd:string"
+									use="optional" />
+							</xsd:extension>
+						</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+			<!-- domain of the operation -->
+			<xsd:attribute name="domain" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+	<!-- An xml-mgmt response -->
+	<xsd:element name="response">
+		<xsd:complexType>
+			<xsd:sequence>
+				<!-- optional timestamp -->
+				<xsd:element name="timestamp" type="xsd:dateTime"
+					minOccurs="0" maxOccurs="1" />
+				<xsd:choice>
+					<!-- general response -->
+					<xsd:element name="result">
+						<xsd:complexType mixed="true">
+							<xsd:sequence>
+								<xsd:any processContents="skip" minOccurs="0"
+									maxOccurs="unbounded" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
