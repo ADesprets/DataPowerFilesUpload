@@ -1,0 +1,23 @@
+@startuml
+note "From http://plantuml.com/" as N1
+package datapower.ibm.com <<Folder>> {
+
+	class InvalidManifestException {
+	  +void parseCommandLine()
+	}
+	
+	class SOMALoadFiles  {
+	   pattern : String
+	   +void main(String[] args)
+	   -parmsAreValid(String[] args)
+	   -getFilesFromManifest()
+	   -submitSOMARequest(String request)
+	}
+	
+	SOMALoadFiles --> "1" InvalidManifestException : uses
+}
+
+package java.lang <<Folder>> {
+	Exception ^-- "1" InvalidManifestException : extends
+}
+@enduml
