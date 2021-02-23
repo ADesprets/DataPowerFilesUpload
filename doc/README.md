@@ -1,5 +1,5 @@
 # DataPower files uploader in Java
-Tool to load many files at once in any IBM DataPower Gateway domains.
+Tool to load many files at once in any IBM DataPower Gateway domains written in Java.
 
 ## Table of content
 1. [Use cases](#use-cases)
