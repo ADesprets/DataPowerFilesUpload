@@ -60,7 +60,7 @@ Before invoking the tool, you need to install it, see the design chapter.
 * You can use the following command `java -cp <classpath> datapower.ibm.com.SOMALoadFiles -action load -host <> -FILE <XML input file> -userId <user id> -userPwd <password>`
 * For Maven specialists: Since the project has been written in Java with Maven, there is a test goal that can be used, you need to edit the arguments to suit your environment.
 
-**hint:** Personally, I have added the loadWDPFiles.bat script file in C:\bin where I have all my binaries, and this folder is in my PATH. Like this, it is very easy to use. I do change the bat file to point to the right input file when I need. You could use a parameters (or has many parameters of course for additional security for example).
+**hint:** Personally, I have added the loadWDPFiles.bat script file in C:\bin where I have all my binaries, and this folder is in my PATH. Like this, it is very easy to use. I do change the bat file to point to the right input file when I need. You could use a parameter (or has many parameters of course for additional security for example and not have the password hard-coded...).
 
 # Installation 
 1. git clone the repository
