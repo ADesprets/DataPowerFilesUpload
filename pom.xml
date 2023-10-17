@@ -51,7 +51,7 @@
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-xjc-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.3.1</version>
 				<executions>
 					<execution>
 						<id>xjc</id>
@@ -62,11 +62,11 @@
 						<configuration>
 							<xsdOptions>
 								<xsdOption>
-									<xsd>${basedir}/schemas/files.xsd</xsd>
+									<xsd>${basedir}/src/main/resources/schemas/files.xsd</xsd>
 									<packagename>datapower.ibm.com.dpfiles</packagename>
 								</xsdOption>
 								<xsdOption>
-									<xsd>${basedir}/schemas/xml-mgmt-ops.xsd</xsd>
+									<xsd>${basedir}/src/main/resources/schemas/xml-mgmt-ops.xsd</xsd>
 									<packagename>com.datapower.schemas.management</packagename>
 								</xsdOption>
 							</xsdOptions>
@@ -90,13 +90,13 @@
 								<argument>-action</argument>
 								<argument>load</argument>
 								<argument>-host</argument>
-								<argument>dpdpod.fr.ibm:5550</argument>
+								<argument>dp105.fr.ibm:5550</argument>
 								<argument>-FILE</argument>
-								<argument>C:\temp\file2.xml</argument>
+								<argument>D:\CurrentProjects\PSA\2023\pbLDAP\arno_code\files.xml</argument>
 								<argument>-userId</argument>
 								<argument>admin</argument>
 								<argument>-userPwd</argument>
-								<argument>123456</argument>
+								<argument>Passw0rd!</argument>
 							</arguments>
 						</configuration>
 					</execution>

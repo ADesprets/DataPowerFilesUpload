@@ -3,7 +3,7 @@ Tool to load many files at once in any IBM DataPower Gateway domains written in 
 
 ## Table of content
 1. [Use cases](#use-cases)
-1. [Language](#language)
+1. [Language](#language-java)
 1. [Usage](#usage)
 1. [XML Input file format](#xml-input-file-format)
 1. [Invoking the tool](#invoking-the-tool)
@@ -60,13 +60,13 @@ Before invoking the tool, you need to install it, see the design chapter.
 * You can use the following command `java -cp <classpath> datapower.ibm.com.SOMALoadFiles -action load -host <> -FILE <XML input file> -userId <user id> -userPwd <password>`
 * For Maven specialists: Since the project has been written in Java with Maven, there is a test goal that can be used, you need to edit the arguments to suit your environment.
 
-**hint:** Personally, I have added the loadWDPFiles.bat script file in C:\bin where I have all my binaries, and this folder is in my PATH. Like this, it is very easy to use. I do change the bat file to point to the right input file when I need. You could use a parameter (or has many parameters of course for additional security for example and not have the password hard-coded...).
+**Hint:** Personally, I have added the loadWDPFiles.bat script file in C:\bin where I have all my binaries, and this folder is in my PATH. Like this, it is very easy to use. I do change the bat file to point to the right input file when I need. You could use a parameter (or has many parameters of course for additional security for example and not have the password hard-coded...).
 
 # Installation 
 1. git clone the repository
 2. Compile code using maven
-3. get the dependencies for example using the maven command: `mvn dependency:copy-dependencies` and place them where convenient
-4. Update the loadWDPFiles.bat script (or create the equivalent in Linux)
+3. Get the dependencies for example using the maven command: `mvn dependency:copy-dependencies` and place them where convenient
+4. Update the loadWDPFiles.bat script with your own values (or create the equivalent in Linux)
 5. Use it with an IBM DataPower Gateway
 
 Here is a sample output:
